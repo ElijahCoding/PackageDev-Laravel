@@ -1,0 +1,15 @@
+{
+    "name": "package/press",
+    "description": "laravel blog package",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "ElijahCoding",
+            "email": "cuiyeqing960904@gmail.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "orchestra/testbench": "^4.4"
+    }
+}
