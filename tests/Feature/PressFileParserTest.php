@@ -21,6 +21,17 @@ class PressFileParserTest extends TestCase
     }
 
     /** @test */
+    public function a_string_can_also_be_used_instead()
+    {
+        $pressFileParser = (new PressFileParser("---\ntitle: My Title\n---\nBlog post body here"));
+
+        $data = $pressFileParser->getData();
+
+        $this->assertStringContainsString('title: My Title', $data[1]);
+        $this->assertStringContainsString('Blog post body here', $data[2]);
+    }
+
+    /** @test */
     public function each_head_field_gets_separated()
     {
         $pressFileParser = (new PressFileParser(__DIR__.'/../blogs/MarkFile1.md'));
@@ -40,4 +51,6 @@ class PressFileParserTest extends TestCase
 
         $this->assertEquals("# Heading\n\nBlog post body here", $data['body']);
     }
+
+
 }
