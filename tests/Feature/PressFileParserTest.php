@@ -18,4 +18,14 @@ class PressFileParserTest extends TestCase
         $this->assertStringContainsString('description: Description here', $data[1]);
         $this->assertStringContainsString('Test Text Here', $data[2]);
     }
+
+    public function test_each_head_field_gets_seperated()
+    {
+        $pressFileParser = (new PressFileParser(__DIR__ . '/../stubs/MarkFile1.md'));
+
+        $data = $pressFileParser->getData();
+
+        $this->assertStringContainsString('Title in Title Bar', $data['title']);
+        $this->assertStringContainsString('Description here', $data['description']);
+    }
 }
