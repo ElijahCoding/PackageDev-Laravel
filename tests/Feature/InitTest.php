@@ -1,6 +1,6 @@
 <?php
 
-namespace Package\Press\Tests;
+namespace Illuminate\Press\Tests;
 
 use Orchestra\Testbench\TestCase;
 

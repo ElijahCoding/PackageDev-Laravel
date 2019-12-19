@@ -1,6 +1,6 @@
 {
     "name": "package/press",
-    "description": "laravel blog package",
+    "description": "laravel press package",
     "license": "MIT",
     "authors": [
         {
@@ -8,18 +8,20 @@
             "email": "cuiyeqing960904@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "erusev/parsedown": "^1.7"
+    },
     "require-dev": {
         "orchestra/testbench": "^4.4"
     },
     "autoload": {
         "psr-4": {
-            "Package\\Press\\": "src/"
+            "Illuminate\\Press\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Package\\Press\\": "tests/"
+            "Illuminate\\Press\\": "tests/"
         }
     }
 }
